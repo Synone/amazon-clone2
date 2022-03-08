@@ -1,0 +1,33 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+
+.subtotal{
+    padding: 20px;
+    &__gift{
+        font-size: 0.8rem;
+    }
+    &__checkout-btn{
+        background: #FFD814;
+        border-color: #FCD200;
+        width: 100%;
+        border-radius: 8px;
+     
+        border-style: solid;
+        border-width: 1px;
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 16px;
+        text-align: center;
+        text-decoration: none!important;
+        margin-top: 16px;
+        font-size: 12px;
+    }
+}
+.a-button-primary:hover{
+    background: #F7CA00;
+    border-color: #F2C200;
+    // box-shadow: 0 2px 5px 0 rgba(213 217 217 50%)
+    box-shadow: 0 2px 5px 0 rgba(213,217,217,0.5)
+}
+.total__price{
+    font-size: 0.8rem;
+}

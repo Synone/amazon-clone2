@@ -1,0 +1,38 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+.checkout{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #EAEDED!important;
+    height: max-content;
+    &__left{
+        background-color: white;
+        width: 1140px;
+        margin-right: 16px;
+    }
+    &__right{
+        background-color: white;
+        width: 250px;
+    }
+    &__title{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+    &__heading{
+        border-bottom: 1px solid lightgray;
+        margin-left: 30px;
+        margin-right: 16px;
+        padding: 16px 0px;
+    }
+    &__deselect a{
+        text-decoration: none;
+        color: #007185;
+        font-size: 0.8rem;
+    }
+    &__deselect a:hover{
+        text-decoration: underline;
+        color: #C7511F;
+    }
+    }
+
+

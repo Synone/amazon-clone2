@@ -1,0 +1,145 @@
+@import url('http://fonts.cdnfonts.com/css/amazon-ember');
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: flex-start;
+    z-index: 1000;
+    font-family: 'Amazon Ember', sans-serif;
+    display: flex;
+    
+    &__content{
+        background-color: rgb(249, 252, 255);
+        width: 380px;
+        display: block;
+        overflow-y: scroll;
+        
+        animation: slideIn  ease .5s forwards;
+    }
+    &__closeIcon{
+        color: white;
+        font-size: 2rem !important;
+        margin-top: 10px;
+        margin-left: 390px;
+        z-index: 1000;
+        animation: fadeIn ease .5s;
+        position: fixed;
+    }
+    &__closeIcon:hover{
+        cursor: pointer;
+    }
+    &__content-header{
+        background-color: #232f3e;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        color: white;
+        
+       h1{
+        font-family: 'Amazon Ember', sans-serif;
+        font-size: 1.2rem;
+       }
+    }
+    &__headerIcon{
+        margin-left: 30px ;
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+    
+    &__content-bodyText{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #232f3e;
+        width: 100%;
+        h3{
+            padding-left: 30px;
+            padding-top: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+    }
+    &__content-bodyText-detail:hover{
+        background-color: aliceblue;
+    }
+    &__content-bodyText-detail{
+        padding-left: 40px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    &__content-bodyText-detail:hover{
+        background-color: rgb(206, 224, 240);
+        cursor: pointer;
+    }
+    &__detailIcon{
+        color: gray;
+        font-size: 1rem !important;
+    }
+    &__content-bodyText-final{
+        padding-left: 40px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &__content-bodyText-final:hover{
+        cursor: pointer;
+        background-color: rgb(206, 224, 240);
+    }
+    &__language{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    &__languageIcon{
+        font-size: 1rem !important;
+        margin-right: 18px;
+        opacity: .6;
+    }
+
+    &__country{
+        width: 20px;
+        margin-right: 10px;
+    }
+}
+.mt-l{
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-size: .8rem;
+}
+
+@keyframes slideIn {
+    from  {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200px);
+    }
+}
+
