@@ -2,27 +2,27 @@ import React from 'react';
 import '../Css/app.css'
 import {useState} from 'react';
 import {  useNavigate } from "react-router-dom";
-import firebase from 'firebase/compat/app'
+// import firebase from 'firebase/compat/app'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { initializeApp } from "firebase/app" ;   
-import { getFirestore} from 'firebase/firestore/lite';
+// import { initializeApp } from "firebase/app" ;   
+// import { getFirestore} from 'firebase/firestore/lite';
 import axios from 'axios';
 // import {db, auth} from '../firebase';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+// import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
-const firebaseConfig = { 
-    apiKey : "AIzaSyA8Z2QpHFfxqWcLqmgOCi7LXQE4-hGdm9E" , 
-    authDomain : "challenge-ab023.firebaseapp.com" , 
-    databaseURL : "https://challenge-ab023-default-rtdb.asia-southeast1.firebaseddatabase.app" , 
-    projectId : "challenge-ab023" , 
-    storageBucket : "challenge-ab023.appspot.com" , 
-    messagingSenderId : "407175348461" , 
-    appId : "1:407175348461:web:df2a3dc9773771e0cc4ce4" , 
-    measurementId : "G-TXRQEQV56Y" 
-  };
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+// const firebaseConfig = { 
+//     apiKey : "AIzaSyA8Z2QpHFfxqWcLqmgOCi7LXQE4-hGdm9E" , 
+//     authDomain : "challenge-ab023.firebaseapp.com" , 
+//     databaseURL : "https://challenge-ab023-default-rtdb.asia-southeast1.firebaseddatabase.app" , 
+//     projectId : "challenge-ab023" , 
+//     storageBucket : "challenge-ab023.appspot.com" , 
+//     messagingSenderId : "407175348461" , 
+//     appId : "1:407175348461:web:df2a3dc9773771e0cc4ce4" , 
+//     measurementId : "G-TXRQEQV56Y" 
+//   };
+//   const app = initializeApp(firebaseConfig);
+//   const db = getFirestore(app);
 function SignUp() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
@@ -37,15 +37,15 @@ function SignUp() {
             password: password
         }
         console.log(data);
-
-        axios({
-            method: 'put',
-            url: 'http://172.16.0.139:8000/account/authentication',
-            data: data
-          })
-          .then(function (response) {
-            alert(response.data.msg)
-          });
+        navigate('/')
+        // axios({
+        //     method: 'put',
+        //     url: 'http://172.16.0.139:8000/account/authentication',
+        //     data: data
+        //   })
+        //   .then(function (response) {
+        //     alert(response.data.msg)
+        //   });
 
 
         // const auth = getAuth();

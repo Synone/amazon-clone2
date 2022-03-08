@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import axios from 'axios';
 
 function Login() {
