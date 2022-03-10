@@ -3,28 +3,35 @@ import '../Css/app.css'
 import ReactStars from "react-rating-stars-component";
 import { useStateValue } from './StateProvider';
 
+import { Link } from "react-router-dom";
 
-function Products({id,title,image,price,rating}) {
+function Products({id,title,image,price,rating,description}) {
     const [{basket},dispatch] = useStateValue()
+    
     const ratingChanged = (newRating) => {
         console.log(newRating);
       };
-      const handleAdd = () => {
+      const handleProductClick = () => {
         dispatch({
-            type:'ADD_TO_BASKET',
+            type:'SEE_BASKET',
             item: {
                 id: id,
                 title:title,
                 image: image,
                 price: price,
-                rating: rating
+                rating: rating,
+                description: description
             }
         })
       }
     return (
-        <div className={id === 4 ? 'product product1' :'product'}>
+        <div className={'product'}>
             <div className="product__info">
-                <p>{title}</p>
+               <Link 
+               to='product-detail' 
+               className='product__detail'
+               onClick={handleProductClick}
+               > <p>{title}</p> </Link>
                 <p className="product__price">
                     <small>$</small>
                     <strong>{price}</strong>
@@ -38,10 +45,14 @@ function Products({id,title,image,price,rating}) {
                     activeColor="#ffd700" />
                 </div>
             </div>
-            <img src={image} alt="Book" />
-            <button
+            <div className="product__image-wrapper">
+            <Link to='product-detail' className='product__image-link'> <img src={image} alt="Book" className='product__img'/></Link>
+                </div>
+           
+            {/* <button
                 onClick={handleAdd}            
-            >Add to Cart</button>
+            >Add to Cart</button> */}
+            <Link to='product-detail' className='product__detail-text'>See details</Link>
         </div>
     )
 }

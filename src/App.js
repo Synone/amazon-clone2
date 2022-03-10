@@ -11,7 +11,7 @@ import Payment from './Components/Payment';
 import Orders from "./Components/Orders";
 import Footer from './Footer';
 import StyledComp from "./Components/StyledComp";
-
+import ProductDetail from "./Components/ProductDetail";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { useStateValue } from "./Components/StateProvider";
 
@@ -38,6 +38,7 @@ function App() {
           <Route exact path="/checkout"  caseSensitive={false} element={<> <Header/> <Checkout/></>}/>
           <Route path="*" element={<ErrorMessage/>}/>
           <Route path='/test' element={<StyledComp/>} />
+          <Route path='/product-detail' element = { <><Header/> <StyledComp/> <ProductDetail/>  <Footer/> </> } />
       </Routes>
     </Router>
   );

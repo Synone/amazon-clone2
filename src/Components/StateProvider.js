@@ -5,7 +5,7 @@ const StateContext = createContext();
 export const StateProvider = ({reducer, initState, children}) => 
     
    { 
-        const [searchQuery, setSearchQuery] = useState('hello')
+        // const [searchQuery, setSearchQuery] = useState('hello')
        return (<StateContext.Provider value={useReducer(reducer, initState)}>
         {children}
     </StateContext.Provider>)}

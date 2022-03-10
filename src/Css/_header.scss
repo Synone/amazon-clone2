@@ -59,6 +59,7 @@
         align-items: center;
         border-radius: 24px;
         flex: 1;
+        margin-right: -1rem;
     }
      &__searchInput:focus{
         
@@ -110,24 +111,30 @@
     &__nav{
         display: flex;
         justify-content: space-evenly;
+       
     }
     &__option{
+        
         display: flex;
         flex-direction: column;
-        margin-left: 3px;
         color: white;
-        padding: 0 9px 7px 9px;
+
+        box-sizing: border-box;
     }
-    &__option:hover{
+    &__option-link{
+        margin-right: 8px;
+        padding: 8px;
+    }
+    &__option-link:hover{
         border: 1px solid white;
-        padding: 0 8px 6px 8px;
+        padding: 7px;
     }
     &__optionLineOne{
-        font-size: 10px;
+        font-size: .8rem;
     }
     &__optionLineTwo{
         font-family: 'Roboto', sans-serif;
-        font-size: 13px;
+        font-size: .9rem;
         font-weight: 700;
         cursor: pointer;
         text-decoration: none;
@@ -139,7 +146,20 @@
         
         
     }
-
+    &__option-country{
+        display: flex;
+        padding: 8px;
+    }
+    &__option-country:hover{
+        padding: 7px;
+        border: 1px solid white;
+    }
+    &__country-flag{
+        width: 22px;
+    }
+    &__icon{
+        color: white;
+    }
     &__basketCount{
         margin-left: 8px;
         margin-right: 8px;
@@ -147,6 +167,7 @@
     &__basketLink{
         padding: 4px;
         margin-right: 6px;
+        display: flex;
     }
     &__basketLink:hover{
         border: 1px solid white;
@@ -201,7 +222,6 @@
 .link{
     text-decoration: none;
     color: white;
-    margin-top: -4px;
     
 }
 

@@ -1,6 +1,7 @@
 
 export const initState = {
     basket: [],
+    seeBasket:[],
     user: null,
     searchQuery: ''
 };
@@ -20,6 +21,11 @@ const reducer = (state,action) =>{
                 basket: [...state.basket, action.item]
                 
             };
+        case 'SEE_BASKET':
+            return {
+                ...state,
+                seeBasket: [action.item]
+            }
         case 'DELETE_FROM_BASKET':
             // The findIndex() method returns the index (position) of the first element that passes a test.
             const index = state.basket.findIndex(

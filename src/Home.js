@@ -8,7 +8,7 @@ import {useStateValue} from './Components/StateProvider';
 function Home() {
     const [productData, setProductData] = useState(ProductData);
     const [{searchQuery}] = useStateValue();
-    console.log('Home, ', searchQuery);
+    console.log('Home ', searchQuery);
     const scrollToTop = () =>{
         window.scrollTo({
           top: 0, 
@@ -39,12 +39,12 @@ function Home() {
                 <div className="home__row">
                     {productData.length > 0 ? productData.map(item =>{
                         return <Products
-                            
                             id = {item.id}
                             title = {item.title}
                             price = {item.price}
                             image = {item.image}
                             rating = {(item.rating.rate)}
+                            description = {item.description}
                         />
                     }) : <h1>Product Not Found</h1> }
                  

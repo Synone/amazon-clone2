@@ -2,12 +2,11 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
     margin: 10px;
     padding: 20px;
     width: calc(33.33% - 10px - 5px - 10px);
-    max-height: 400px;
+    max-height: 450px;
     background-color: white;
     z-index: 1;
     &__info{
@@ -17,11 +16,45 @@
     &__price{
         margin-top: 5px;
     }
+    &__image-link{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
+    &__img{
+        width: 45%;
+        max-width: 300px;
+        object-fit: contain;
+    }
+    &__image-wrapper{
+        height: 400px;
+        display: flex;
+        justify-content: center;
+    }
+    &__detail{
+        text-decoration: none;
+        color: #0F1111 ;
+        font-size: 1.1rem;
+        &:hover{
+            color: rgb(211, 157, 58);
+        }
+    }
+    &__detail-text{
+        font-size: .8rem;
+        &:hover{
+            color:rgb(201, 136, 16); 
+            font-style: italic;
+        }
+    }
+    &__qty{
+        width: 20%;
+        border-radius: 5px;
+    }
+    &__qty-list{
+        color: white;
+    }
+}
 
-}
-.product1{
-    width: 60%
-}
 
 
 .product > button {
@@ -33,7 +66,7 @@
     border-radius: 5px;
     background: #FFD814;
     border-color: #FCD200;
-    border: 0.5px solid gray;
+    border: none;
 }
 .product > button:hover{
     background-color: #febd69;
@@ -49,4 +82,19 @@
     width: 80%;
     object-fit: contain;
     margin-bottom: 15px;
+}
+
+.selected__product{
+    display: flex;
+    padding: 20px;
+    max-width: 1400px;
+    background-color: white;
+    margin: 0 auto;
+    justify-content: space-between;
+    &-image{
+        max-width: 410px;
+        max-height: 410px;
+        object-fit: contain;
+    }
+    
 }

@@ -6,7 +6,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Link } from "react-router-dom";
 import { useStateValue } from "./Components/StateProvider";
 import styled from 'styled-components';
-
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Flags from 'country-flag-icons/react/3x2';
 // install MaterialUI for icons
 
 const Wrapper = styled.section`
@@ -92,20 +93,29 @@ function Header() {
         
       </div>
       <div className="header__nav">
+        <div className="header__option-country">
+        <Flags.VN title='Vietnam' className='header__country-flag' />
+        <ArrowDropDownIcon className="header__icon"/>
+          </div>
+      <Link to={!user && '/login'} className="link header__option-link">
         <div onClick={handleAuthentication} className="header__option">
-          <span className="header__optionLineOne">Hello {user ? user.displayName:'Guest'} </span>
-          <Link to={!user && '/login'} className="link">
-            <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
-          </Link>
+          <span className="header__optionLineOne">Hello, Sign in</span>
+         
+            <span className="header__optionLineTwo">Account &amp; Lists</span>
         </div>
-        <div className="header__option">
-          <span className="header__optionLineOne">Returns</span>
+        </Link>
+        <Link to={!user && '/login'} className="link header__option-link">
+        <div onClick={handleAuthentication} className="header__option">
+        <span className="header__optionLineOne">Returns</span>
           <span className="header__optionLineTwo">&amp; Orders</span>
         </div>
-        <div className="header__option">
-          <span className="header__optionLineOne">Your</span>
+        </Link>
+        <Link to={!user && '/login'} className="link header__option-link">
+        <div onClick={handleAuthentication} className="header__option">
+        <span className="header__optionLineOne">Your</span>
           <span className="header__optionLineTwo">Prime</span>
         </div>
+        </Link>
         <Link to="/checkout" className="header__basketLink">
           <div className="header__optionBasket">
             <ShoppingBasketIcon />
