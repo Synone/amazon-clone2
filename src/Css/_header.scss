@@ -158,7 +158,11 @@
         width: 22px;
     }
     &__icon{
-        color: white;
+        color: #ccc;
+        align-self: self-end;
+        margin-left: -2px;
+        margin-bottom: 4px;
+        font-size: 1.2rem !important;
     }
     &__basketCount{
         margin-left: 8px;
