@@ -1,47 +1,51 @@
-.home{
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+.home {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
-.home__image{
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));
+.home__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
-.home__container{
-    width: 100%;
+.home__container {
+  width: 100%;
 }
-.image__slider{
-    width: 100%;
-    margin-left: 0px;
-    z-index: -10;
-    margin-bottom: -400px;
-   
+.image__slider {
+  width: 100%;
+  margin-left: 0px;
+  z-index: -10;
+  margin-bottom: -400px;
+  @include responsive(tab-port) {
+    margin-bottom: -250px;
+  }
+  @include responsive(tab-land) {
+    margin-bottom: -250px;
+  }
 }
-.home__row{
-   display: flex;
-   z-index: 1;
-   flex-wrap: wrap;
-   margin-left: 5px;
-   margin-right: 5px;
-   width: 100%;
+.home__row {
+  display: flex;
+  z-index: 1;
+  flex-wrap: wrap;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100%;
 }
 
-.backToTop{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #37475A;
-    height: 50px;
-    color: white;
-    font-size: .8rem;
-    font-family: 'Amazon Ember' sans-serif;
-    
+.backToTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #37475a;
+  height: 50px;
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'Amazon Ember' sans-serif;
 }
-.backToTop:hover{
-    cursor: pointer;
-    background-color: #405d7e;
+.backToTop:hover {
+  cursor: pointer;
+  background-color: #405d7e;
 }

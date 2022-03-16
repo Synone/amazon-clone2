@@ -1,131 +1,145 @@
 @import url('http://fonts.cdnfonts.com/css/amazon-ember');
 
-.footer{
-    background-color: #232F3E;
-    
-    &__upperPart{
-        display: flex;
-        justify-content: space-between;
-        margin-left: 120px;
-        margin-right: 120px;
-        color: white;
-        font-family: 'Amazon Ember' sans-serif;
-        margin-bottom: 80px;
+.footer {
+  background-color: #232f3e;
+
+  &__upperPart {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 120px;
+    margin-right: 120px;
+    color: white;
+    font-family: 'Amazon Ember' sans-serif;
+    margin-bottom: 80px;
+    @include responsive(tab-port) {
+      margin-left: 40px;
+      margin-right: 40px;
     }
-    &__body {
-        padding-top: 40px;
-        
-        h6{
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-        ul {
-            margin-left: -40px;
-        }
-        ul li{
-            list-style: none;
-        }
-        ul li a{
-            text-decoration: none;
-            color: #DDD;
-            font-size: 0.8rem;
-        }
+    @include responsive(tab-land) {
+      margin-left: 40px;
+      margin-right: 40px;
     }
-    &__lowerPart{
-        border-top: .5px solid rgb(85, 85, 85);
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        padding-top: 30px;
-        align-items: center;
-        padding-bottom: 20px;
+  }
+  &__body {
+    padding-top: 40px;
+
+    h6 {
+      font-size: 1rem;
+      margin-bottom: 10px;
     }
-    &__logoSprite{
-        background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png');
-        background-position: -10px -90px;
-        width: 76px;
-        height: 23px;
-        margin: 0 auto;
-        display: inline-block;
-     
+    ul {
+      margin-left: -40px;
     }
-    &__line{
-        display: inline-block;
+    ul li {
+      list-style: none;
     }
-    &__line-items{
-        display: flex;
-        margin-left: 50px;
-        margin-top: -10px
+    ul li a {
+      text-decoration: none;
+      color: #ddd;
+      font-size: 0.8rem;
     }
-    &__line-item{
-        color: #DDD;
-        border: 0.1px solid #ddd;
-        margin-right: 10px;
-        padding: 4px 12px;
-        border-radius: 5px;
-        font-family: 'Amazon Ember' sans-serif;
-        font-size: .9rem;
+  }
+  &__lowerPart {
+    border-top: 0.5px solid rgb(85, 85, 85);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  &__logoSprite {
+    background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png');
+    background-position: -10px -90px;
+    width: 76px;
+    height: 23px;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  &__line {
+    display: inline-block;
+  }
+  &__line-items {
+    display: flex;
+    margin-left: 50px;
+    margin-top: -10px;
+  }
+  &__line-item {
+    color: #ddd;
+    border: 0.1px solid #ddd;
+    margin-right: 10px;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-family: 'Amazon Ember' sans-serif;
+    font-size: 0.9rem;
+  }
+  &__language-icon {
+    font-size: 1rem;
+    margin-right: 6px;
+  }
+  &__line-item-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      padding-right: 20px;
     }
-    &__language-icon{
-        font-size: 1rem;
-        margin-right: 6px;
+  }
+  &__flag {
+    width: 20px;
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+  &__finalPart {
+    background-color: #131a22;
+    padding-top: 30px;
+  }
+  &__finalPart-1 {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 120px;
+    width: 80%;
+    flex-wrap: wrap;
+    @include responsive(tab-port) {
+      margin-left: 50px;
+      width: 90%;
     }
-    &__line-item-flex{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        p{
-            padding-right: 20px;
-        }
+  }
+  &__finalPart1-item {
+    width: 13%;
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: #ddd;
+      font-size: 0.7rem;
+      h6 {
+        font-size: 0.8rem;
+      }
     }
-    &__flag{
-        width: 20px;
-        margin-right: 10px;
-        margin-top: 2px;
+    a:hover {
+      text-decoration: underline;
     }
-    &__finalPart{
-        background-color: #131A22;
-        padding-top: 30px;
+  }
+  &__finalPart-2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Amazon Ember' sans-serif;
+    padding: 80px;
+    @include responsive(tab-port) {
+      padding: 40px;
     }
-    &__finalPart-1{
-        display: flex;
-        justify-content: space-around;
-        margin-left: 120px;
-        width: 80%;
-        flex-wrap: wrap;
+    a {
+      text-decoration: none;
+      color: #ddd;
+      font-size: 0.8rem;
+      margin-right: 20px;
     }
-    &__finalPart1-item{
-        width: 13%;
-        margin-bottom: 20px;
-        a{
-            text-decoration: none;
-            color: #ddd;
-            font-size: .7rem;
-            h6{
-                font-size: .8rem;
-            }
-        }
-        a:hover{
-            text-decoration: underline;
-        }
+    a:hover {
+      text-decoration: underline;
     }
-    &__finalPart-2{
-        display: flex;
-        justify-content: center;
-        font-family: 'Amazon Ember' sans-serif;
-        padding: 80px;
-        a{
-            text-decoration: none;
-            color: #ddd;
-            font-size: .8rem;
-            margin-right: 20px;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-        p{
-            color: #ddd;
-            font-size: .8rem;
-        }
+    p {
+      color: #ddd;
+      font-size: 0.8rem;
     }
+  }
 }
